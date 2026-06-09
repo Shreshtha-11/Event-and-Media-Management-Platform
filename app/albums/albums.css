@@ -1,0 +1,9 @@
+.albums-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 24px; }
+.album-card { cursor: pointer; overflow: hidden; }
+.album-card-cover { aspect-ratio: 4/3; overflow: hidden; border-radius: var(--radius-md); margin-bottom: 12px; }
+.album-card-cover img { width: 100%; height: 100%; object-fit: cover; transition: transform var(--transition-slow); }
+.album-card:hover .album-card-cover img { transform: scale(1.06); }
+.album-card-info h3 { font-family: var(--font-heading); font-size: 1.05rem; color: var(--color-text); }
+.album-card-info p { font-size: 0.85rem; color: var(--color-text-muted); margin-top: 4px; }
+.album-card-skeleton { aspect-ratio: 4/3; border-radius: var(--radius-lg); background: var(--color-bg-tertiary); }
+.album-detail-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 28px; gap: 20px; }

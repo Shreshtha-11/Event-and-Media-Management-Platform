@@ -1,0 +1,25 @@
+/* Event Components CSS */
+.event-card { border-radius: var(--radius-lg); overflow: hidden; background: var(--color-surface); border: 1px solid var(--color-border); cursor: pointer; transition: all var(--transition-normal); }
+.event-card-image-wrapper { position: relative; aspect-ratio: 16/10; overflow: hidden; }
+.event-card-image { width: 100%; height: 100%; object-fit: cover; transition: transform var(--transition-slow); }
+.event-card:hover .event-card-image { transform: scale(1.06); }
+.event-card-overlay { position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.5), transparent 50%); display: flex; align-items: flex-start; justify-content: flex-end; padding: 12px; }
+.event-card-category { background: var(--gradient-primary); color: #fff; padding: 4px 14px; border-radius: var(--radius-full); font-size: 0.75rem; font-weight: 600; text-transform: capitalize; }
+.event-card-content { padding: 16px; }
+.event-card-title { font-family: var(--font-heading); font-size: 1.15rem; color: var(--color-text); margin-bottom: 8px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.event-card-meta { display: flex; flex-wrap: wrap; gap: 12px; font-size: 0.85rem; color: var(--color-text-secondary); margin-bottom: 8px; }
+.event-card-stats { display: flex; gap: 16px; font-size: 0.8rem; color: var(--color-text-muted); }
+.event-card-private-badge { display: inline-block; margin-top: 8px; font-size: 0.75rem; color: var(--color-warning); background: color-mix(in srgb, var(--color-warning) 10%, transparent); padding: 2px 10px; border-radius: var(--radius-full); }
+
+/* Event Form */
+.event-form { display: flex; flex-direction: column; gap: 20px; }
+.event-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+@media (max-width: 640px) { .event-form-row { grid-template-columns: 1fr; } }
+.event-form-field { display: flex; flex-direction: column; gap: 6px; }
+.event-form-label { font-size: 0.85rem; font-weight: 600; color: var(--color-text-secondary); }
+.event-form-select, .event-form-textarea { width: 100%; padding: 12px 16px; border: 1px solid var(--color-border); border-radius: var(--radius-md); background: var(--color-bg); color: var(--color-text); font-size: 0.95rem; font-family: var(--font-body); outline: none; transition: border var(--transition-fast); resize: vertical; }
+.event-form-select:focus, .event-form-textarea:focus { border-color: var(--color-primary); }
+.event-form-visibility { display: flex; gap: 12px; }
+.visibility-option { display: flex; align-items: center; gap: 6px; padding: 10px 20px; border: 1px solid var(--color-border); border-radius: var(--radius-md); cursor: pointer; transition: all var(--transition-fast); font-size: 0.9rem; color: var(--color-text-secondary); }
+.visibility-option.active { border-color: var(--color-primary); background: color-mix(in srgb, var(--color-primary) 8%, transparent); color: var(--color-primary); }
+.visibility-option input { display: none; }

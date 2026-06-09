@@ -1,0 +1,10 @@
+.explore-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; gap: 20px; flex-wrap: wrap; }
+.explore-header h1 { font-family: var(--font-heading); font-size: 1.8rem; }
+.explore-search { flex: 1; max-width: 500px; padding: 14px 22px; border: 1px solid var(--color-border); border-radius: var(--radius-full); background: var(--color-surface); color: var(--color-text); font-size: 0.95rem; outline: none; transition: all var(--transition-fast); }
+.explore-search:focus { border-color: var(--color-primary); box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 15%, transparent); }
+.explore-filter-chips { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; }
+.explore-chip { padding: 8px 20px; border: 1px solid var(--color-border); border-radius: var(--radius-full); background: var(--color-surface); color: var(--color-text-secondary); font-size: 0.85rem; font-weight: 500; cursor: pointer; transition: all var(--transition-fast); font-family: var(--font-body); }
+.explore-chip.active { background: var(--gradient-primary); color: #fff; border-color: transparent; }
+.explore-chip:hover:not(.active) { border-color: var(--color-primary); color: var(--color-primary); }
+.explore-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+.explore-tags .badge { cursor: pointer; }
